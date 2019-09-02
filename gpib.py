@@ -41,7 +41,7 @@ import sys
 # ++verbose
 
 
-class GPIB_Adapter(object):
+class AR488(object):
     """Class to represent AR488 USB-GPIB adapter.
 
     The AR488 is an Arduino-based USB-GPIB adapter.
@@ -94,7 +94,7 @@ class GPIB_Adapter(object):
 if __name__ == "__main__":
     # Hello World!
     import time
-    with GPIB_Adapter(timeout=4) as gpib:
+    with AR488(timeout=4) as gpib:
         print("port name: {}".format(gpib.ser.name))
         print("baudrate: {}".format(gpib.ser.baudrate))
         print("timeout: {}".format(gpib.ser.timeout))
